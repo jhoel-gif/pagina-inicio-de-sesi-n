@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Autenticación</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Autenticación Web</h1>
+
+        <!-- Registro -->
+        <div id="registro">
+            <h2>Crear Cuenta</h2>
+            <form id="formRegistro">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="usuario" placeholder="Correo electrónico" required>
+                <input type="text" id="celular" placeholder="Número de móvil" required>
+                <div class="password-field">
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <label><input type="checkbox" id="mostrarPassRegistro"> Mostrar contraseña</label>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+            <p id="mensajeRegistro" class="mensaje"></p>
+        </div>
+
+        <!-- Login -->
+        <div id="login">
+            <h2>Iniciar Sesión</h2>
+            <form id="formLogin">
+                <input type="email" id="loginUsuario" placeholder="Correo electrónico" required>
+                <div class="password-field">
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    <label><input type="checkbox" id="mostrarPassLogin"> Mostrar contraseña</label>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p id="mensajeLogin" class="mensaje"></p>
+            <p><a href="#" id="recuperarLink">¿Olvidaste tu contraseña?</a></p>
+        </div>
+
+        <!-- Recuperar Contraseña -->
+        <div id="recuperar" style="display:none;">
+            <h2>Recuperar Contraseña</h2>
+            <form id="formRecuperar">
+                <div class="password-field">
+                    <input type="password" id="nuevaPassword" placeholder="Nueva contraseña" required>
+                    <label><input type="checkbox" id="mostrarPassRecuperar"> Mostrar contraseña</label>
+                </div>
+                <button type="submit">Actualizar Contraseña</button>
+            </form>
+            <p id="mensajeRecuperar" class="mensaje"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
